@@ -19,9 +19,10 @@ serde = { version = "1.0.229", default-features = false, features = [
     "derive",
 ], optional = true }
 libm = { version = "0.2.16", optional = true }
+freya-core = { version = "0.5.0-rc.10", optional = true }
 
 [features]
-default = ["std"]
+default = ["std", "freya"]
 alloc = []
 std = [
     "alloc",
@@ -33,6 +34,7 @@ std = [
 quantize = ["alloc", "dep:ahash", "indexmap"]
 serde = ["dep:serde"]
 libm = ["dep:libm"]
+freya = ["dep:freya-core"]
 
 [profile.dev]
 opt-level = 1

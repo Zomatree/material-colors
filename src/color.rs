@@ -264,6 +264,20 @@ impl fmt::Display for Rgb {
     }
 }
 
+#[cfg(feature = "freya")]
+impl From<Rgb> for freya_core::style::color::Color {
+    fn from(rgb: Rgb) -> Self {
+        rgb.as_argb_u32().into()
+    }
+}
+
+#[cfg(feature = "freya")]
+impl From<Rgb> for freya_core::style::fill::Fill {
+    fn from(rgb: Rgb) -> Self {
+        freya_core::style::fill::Fill::Color(rgb.into())
+    }
+}
+
 /// Converts an L* value to a Y value.
 ///
 /// L* in L*a*b* and Y in Xyz measure the same quantity, luminance.
