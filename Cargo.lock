@@ -602,9 +602,9 @@ dependencies = [
 
 [[package]]
 name = "freya-core"
-version = "0.5.0-beta.12"
+version = "0.5.0-rc.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ca320d36430dfebf3fcd7c9e577f616558073e985a172323a225685af9a5935"
+checksum = "69bb946f2c60bfaa0b472945495589fbd7b72e1dbeed4e6a7a60af482116ff20"
 dependencies = [
  "accesskit",
  "async-io",
@@ -626,6 +626,7 @@ dependencies = [
  "ragnarok",
  "rustc-hash",
  "tiny-cache",
+ "tiny-diff",
  "tiny-notify",
  "torin",
  "tracing",
@@ -634,9 +635,9 @@ dependencies = [
 
 [[package]]
 name = "freya-engine"
-version = "0.5.0-beta.12"
+version = "0.5.0-rc.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "24dc1cdee83e5613bb66944fb334139f1bfc15551a5b2de7edc6a9658844d7f4"
+checksum = "24cfd6f0761f115e09e8e08c78b7f8e679e18755bc43f0447f3fd168ce55f1a3"
 dependencies = [
  "freya-skia-safe",
 ]
@@ -852,18 +853,18 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "hotpath"
-version = "0.28.6"
+version = "0.29.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2ee4f8d17ebe2400fa845f079acf9ede235be6472512876779af45f7890f934"
+checksum = "5b4af2b5ecf2650278fe33b0e49b68c8c484d2306475c127628316dea740cf5c"
 dependencies = [
  "hotpath-macros",
 ]
 
 [[package]]
 name = "hotpath-macros"
-version = "0.28.6"
+version = "0.29.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2b90aafbaf5f6af01ee9db2888644b15995f5306e5c280aec8261feb3e5e214a"
+checksum = "08c0a42eb299ebb7ec6b9161489e5bf132603a34ca12cecadb8490937aa0492a"
 
 [[package]]
 name = "http"
@@ -1596,9 +1597,9 @@ checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
 name = "pathgraph"
-version = "0.5.0-beta.12"
+version = "0.5.0-rc.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "45cc14bb9d39750757ea3a818e6b309f1cf3334abf7934016ea3e9f271bf08db"
+checksum = "b20dc62791fc458c1b7974aade9870c0c9c08a0ca87c1c2eec1b130fa90df46b"
 
 [[package]]
 name = "percent-encoding"
@@ -1787,9 +1788,9 @@ checksum = "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f"
 
 [[package]]
 name = "ragnarok"
-version = "0.5.0-beta.12"
+version = "0.5.0-rc.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef6cb83628e3bb8a0d0e5256d9891a4651745cf5d13aba20c7930898c2c2bcb1"
+checksum = "93a86c572826ccefce2786deab1cb34549b5b3f7e1a4eb5cb2dec4590394deff"
 dependencies = [
  "euclid",
  "hashbrown 0.16.1",
@@ -2329,19 +2330,29 @@ dependencies = [
 
 [[package]]
 name = "tiny-cache"
-version = "0.5.0-beta.12"
+version = "0.5.0-rc.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1bd7d4da5b928d1f33c8da9bc8e171b90df9b5d8f0f1685de5b2bd67ad1dfb54"
+checksum = "1bf571288e41006520b1fb2f2bf2e2893b623c78b3799e4c70e5735697b25abc"
 dependencies = [
  "rustc-hash",
  "smallvec",
 ]
 
 [[package]]
-name = "tiny-notify"
-version = "0.5.0-beta.12"
+name = "tiny-diff"
+version = "0.5.0-rc.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7ea9df5677fbaac0abad335a0b4c11021b90395e35d2f8a2ac049c662f27a66c"
+checksum = "cdf0783871e87f114089c649d0b4e270adaf90e4617ca8112ff6c75a8b1d2259"
+dependencies = [
+ "hashbrown 0.16.1",
+ "rustc-hash",
+]
+
+[[package]]
+name = "tiny-notify"
+version = "0.5.0-rc.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a775bea0e84366158f23f64ce142ca103419dba5221ac2c7bda3ab422e084095"
 
 [[package]]
 name = "tinystr"
@@ -2470,9 +2481,9 @@ checksum = "06bdbd8cfc056b8d2e2e85f29b56a3bdbecb527cef81eb39e3e7b98af4652770"
 
 [[package]]
 name = "torin"
-version = "0.5.0-beta.12"
+version = "0.5.0-rc.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "18535a3ec72780b7c03b715df84761ad2c8075f6935d511d6efaf009e6e04f09"
+checksum = "4a0f805e4aab9ad33b70628f002e556a5f70349ff26c6eaf7e6864ccd96a50c2"
 dependencies = [
  "euclid",
  "hashbrown 0.16.1",
